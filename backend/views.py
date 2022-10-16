@@ -537,35 +537,35 @@ def record(request):
 
 
 def backup(request):
-#     global today_backup, internet
-#     network()
-#     if today_backup == False:
-#         if internet == True:
-#             os.system(
-#                 "python .\manage.py dumpdata --natural-foreign --natural-primary -e contenttypes --indent 4 > backup.json")
-#             with open('backup.json', 'r') as f:
-#                 data_back = f.read()
-#             os.system('del backup.json')
-#             gauth = GoogleAuth()
-#             gauth.LoadCredentialsFile("mycreds.txt")
-#             if gauth.credentials is None:
-#                 gauth.LocalWebserverAuth()
-#             elif gauth.access_token_expired:
-#                 gauth.Refresh()
-#             else:
-#                 gauth.Authorize()
-#             gauth.SaveCredentialsFile("mycreds.txt")
-#             drive = GoogleDrive(gauth)
-#             file_metadata = {'title': 'backup.json',
-#                              'parents': [{'kind': 'drive#fileLink',
-#                                           'id': '1VJuWUSOSqB0ew3GlyPLibm7Jzx1GXVXg'}], 'id': '1wMptWuXmg0wjIe_hummzzUUYCjN3NtC5'}
-#             file1 = drive.CreateFile(file_metadata)
-#             file1.SetContentString(data_back)
-#             file1.Upload()
-#             return HttpResponse('Backup generated successfully.')
-#         else:
-#             return HttpResponse('Connect to internet to generate backup.')
-#     else:
-#         return HttpResponse('Today Backup is already generated.')
+    global today_backup, internet
+    network()
+    if today_backup == False:
+        if internet == True:
+            os.system(
+                "python .\manage.py dumpdata --natural-foreign --natural-primary -e contenttypes --indent 4 > backup.json")
+            with open('backup.json', 'r') as f:
+                data_back = f.read()
+            os.system('del backup.json')
+            gauth = GoogleAuth()
+            gauth.LoadCredentialsFile("mycreds.txt")
+            if gauth.credentials is None:
+                gauth.LocalWebserverAuth()
+            elif gauth.access_token_expired:
+                gauth.Refresh()
+            else:
+                gauth.Authorize()
+            gauth.SaveCredentialsFile("mycreds.txt")
+            drive = GoogleDrive(gauth)
+            file_metadata = {'title': 'backup.json',
+                             'parents': [{'kind': 'drive#fileLink',
+                                          'id': '1VJuWUSOSqB0ew3GlyPLibm7Jzx1GXVXg'}], 'id': '1wMptWuXmg0wjIe_hummzzUUYCjN3NtC5'}
+            file1 = drive.CreateFile(file_metadata)
+            file1.SetContentString(data_back)
+            file1.Upload()
+            return HttpResponse('Backup generated successfully.')
+        else:
+            return HttpResponse('Connect to internet to generate backup.')
+    else:
+        return HttpResponse('Today Backup is already generated.')
 
     return HttpResponse('backup System under development.')
