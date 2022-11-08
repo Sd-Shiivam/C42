@@ -50,9 +50,21 @@
    ```
    
 
-## [😍] Contributing
-This project welcomes contributions. Join and make is more useful and better.
- 
+
+## <a name='how-to-contribute'>💥 How to Contribute?</a>
+
+- Take a look at the Existing [Issues](https://github.com/Sd-Shiivam/Tools-db/issues) or create your Issues!
+- Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
+- Having difficulty in contributing? Read the [Contribution Guide](https://github.com/Sd-Shiivam/Tools-db/blob/main/CONTRIBUTING.md) for a detailed explanation.
+
+## <a name='contributors'>👥 Contributors</a>
+
+<a href="https://github.com/Sd-Shiivam/C42/graphs/contributors">
+    <p align="center" >
+        <img src="https://contrib.rocks/image?repo=Sd-Shiivam/C42" />
+    </p>
+</a>
+
  ## [✌️] Notice
     For security purpose all commit history has been removed before making it public repo.
  
